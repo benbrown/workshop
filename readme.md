@@ -1,4 +1,7 @@
 # BOTS: A workshop
+## DRAFT
+
+Contents:
 
 Module 0 - prep and setup
 Module 1 - Echo bot running locally
