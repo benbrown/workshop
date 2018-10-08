@@ -3,9 +3,9 @@
 
 ### Contents:
 
-* Module 01 - prep and setup
-* Module 02 - Echo bot running locally
-* Module 03 - welcoming user and greeting 
+* [Module 01](code/01.setup) - prep and setup
+* [Module 02](code/02.echo_bot) - Echo bot running locally
+* [Module 03](code/03.welcome_bot) - welcoming user and greeting 
 * Module 04 - Menu driven (basic flow (‘static’) and/or buttons… )
 * Module 05 - QnAmaker  - code to use AND training on using tool
 * Module 06 - Open ticket using Waterfall dialogs 
