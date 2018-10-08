@@ -5,7 +5,7 @@
  // STEP 1:
  // Import some components from external libraries.
  // UNCOMMENT TO ACTIVATE
-//  const { BotFrameworkAdapter, ConversationState, MemoryStorage } = require('botbuilder');
+//  const { ActivityTypes, BotFrameworkAdapter, ConversationState, MemoryStorage } = require('botbuilder');
 //  const { BotConfiguration } = require('botframework-config');
 //  const restify = require('restify');
 
@@ -37,13 +37,14 @@
 //     // UNCOMMENT TO ACTIVATE
 //     // adapter.processActivity(req, res, async (context) => {
 
+//     //     // Log the incoming activity to the console
+//     //     // UNCOMMENT TO ACTIVATE
+//     //     // console.log('Incoming activity: ', context.activity);
+
 //     //     // STEP X:
 //     //     // Send a simple response to the incoming event.
 //     //     // UNCOMMENT TO ACTIVATE
 //     //     // await context.sendActivity(`RECEIVED: ${ context.activity.type }`);
-
-//     //     // Log the incoming activity to the console
-//     //     // console.log('Incoming activity: ', context.activity);
 
 //     // });
 

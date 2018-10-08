@@ -140,9 +140,9 @@ Step 7: Send a simple response to the incoming event.
 ```javascript
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (context) => {
-        await context.sendActivity(`RECEIVED: ${ context.activity.type }`);
-
         console.log('Incoming activity: ', context.activity);
+
+        await context.sendActivity(`RECEIVED: ${ context.activity.type }`);
     });
 });
 ```
@@ -183,7 +183,7 @@ IF IT DOESN'T:
 * make sure bot framework bot configuration is loaded (should see Live Chat (Workshop) in title bar)
 
 
-## LESSON COMPLETE!
+## MODULE COMPLETE!
 
 You now have the essential tools for building a bot installed and ready to extend.
 
@@ -193,3 +193,5 @@ You now have the essential tools for building a bot installed and ready to exten
 * Echobot with counter sample
 * Docs about Bot Adapters
 * Restify docs
+
+## [NEXT MODULE](../02.echo_bot)
