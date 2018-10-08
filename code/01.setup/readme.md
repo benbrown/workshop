@@ -85,14 +85,111 @@ Note: All of these files got stored in the `node_modules` folder, and references
 
 Our project needs an [index.js](index.js) file to start. Create it in visual studio code along side the other files.
 
+Step 1: Import some components from external libraries.
+ 
+ ```javascript
+ const { BotFrameworkAdapter, ConversationState, MemoryStorage } = require('botbuilder');
+ const { BotConfiguration } = require('botframework-config');
+ const restify = require('restify');
+```
 
-### Create .env file
+Step 2: Initialize our application environment with values from the .env file
 
-Add the following
+```javascript
+ require('dotenv').config();
+```
+
+Create a file called [.env](.env) and the following:
 ```
 botFilePath=workshop.bot
 ```
 
-Save to [.env](.env)
+Step 3: Create the bot's adapter. It is responsible for sending and receiving messages for the bot. 
+
+```javascript
+const adapter = new BotFrameworkAdapter({});
+```
 
 
+Step 4: Create a web server. 
+
+```javascript
+const server = restify.createServer();
+server.listen(process.env.port || process.env.PORT || 3978, function() {
+    console.log(`\n${ server.name } listening to ${ server.url }`);
+});
+```
+
+Step 5: Define an endpoint URL used to receive messages from Bot Framework.
+```javascript
+server.post('/api/messages', (req, res) => {
+
+});
+```
+
+Step 6: Process the incoming request into a TurnContext.
+```javascript
+server.post('/api/messages', (req, res) => {
+    adapter.processActivity(req, res, async (context) => {
+
+    });
+});
+```
+
+Step 7: Send a simple response to the incoming event.
+```javascript
+server.post('/api/messages', (req, res) => {
+    adapter.processActivity(req, res, async (context) => {
+        await context.sendActivity(`RECEIVED: ${ context.activity.type }`);
+
+        console.log('Incoming activity: ', context.activity);
+    });
+});
+```
+
+Your resulting file should match [index.js](index.js).
+
+## Boot the bot!
+
+From the command line, run:
+
+```
+node index.js
+```
+
+You should see output like:
+```
+restify listening to http://[::]:3978
+```
+
+IF YOU DON'T:
+
+what could go wrong? 
+common errors?
+
+## Load in emulator
+
+* Open the Bot Framework Emulator
+* Select "Open Bot"
+* Choose workshop.bot
+
+The framework will connect to your bot. You'll see it send a few messages immediately, demonstrating that your bot is receiving activities.  
+
+Any time you send a message, the bot should reply immediately with a confirmation.
+
+IF IT DOESN'T:
+
+* make sure app is running
+* make sure bot framework bot configuration is loaded (should see Live Chat (Workshop) in title bar)
+
+
+## LESSON COMPLETE!
+
+You now have the essential tools for building a bot installed and ready to extend.
+
+## Extra credit Reading
+
+* Console Bot Sample
+* Echobot with counter sample
+* Docs about Bot Adapters
+* Restify docs
