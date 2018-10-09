@@ -26,9 +26,15 @@ After installing Node, install the `msbot` command line tool. You'll use this to
 npm install -g msbot
 ```
 
-## Initialize the project:
+## Initialize a bot project:
 
-### Use the msbot command line tool to create a .bot file:
+### Create a new folder for your project:
+
+```
+mkdir bot_project ; cd bot_project
+```
+
+### Use the [msbot command line tool](https://github.com/Microsoft/botbuilder-tools/blob/master/packages/MSBot/README.md) to create a .bot file:
 
 ```
 msbot init
@@ -36,11 +42,11 @@ msbot init
 
 * Answer "workshop" as bot's name.
 * Answer `http://localhost:3978/api/messages` for endpoint
-* Answer "no" to "appid"
-* Answer "no" to encrypt
+* Answer "no" to "appid".
+* Answer "no" to encrypt.
 
 This will result in [workshop.bot](workshop.bot) being createad. This bot file contains information about your bot's configuration,
-and works across all of the Azure Bot Services tools like the Bot Framework Emulator.
+and works with all of the Azure Bot Services tools like the Bot Framework Emulator.
 
 ### Use npm to initialize the package.json file
 
@@ -48,18 +54,18 @@ and works across all of the Azure Bot Services tools like the Bot Framework Emul
 npm init
 ```
 
-* Answer "workshop_bot" as package name
-* Accept defaults for additional options
+* Answer "workshop_bot" for the package name.
+* Accept defaults for all the additional options.
 
 This will result in [package.json](package.json) being created. This file contains informaiton about your Node project,
-including a list of modules your project depends on to run. The next step is to install some of those modules!
+including a list of modules your project depends on to run. The next step is to install some of those modules.
 
-### Install Bot Builder and associated tools into the library
+### Install Bot Builder SDK and extensions
 
-Using npm, install all of the Bot Builder libraries. We won't use some of these til much later in the workshop, but its easier to just get this out of the way up front. 
+Using npm, install the Bot Builder SDK and all the extension libraries. You won't use some of these until later in the workshop, 
+but its easier to get this out of the way up front. 
 
-We'll install:
-
+You will install:
 * [botbuilder](https://www.npmjs.com/package/botbuilder) - the main library
 * [botbuilder-ai](https://www.npmjs.com/package/botbuilder-ai) - tools for using LUIS and QnA Maker
 * [botbuilder-azure](https://www.npmjs.com/package/botbuilder-azure) - tools for integrating with Azure storage
@@ -70,24 +76,25 @@ We'll install:
 npm install --save botbuilder botbuilder-ai botbuilder-azure botbuilder-dialogs botframework-config
 ```
 
-In addition to Bot Builder, we need a few open source libraries. 
+In addition to Bot Builder, you need a few open source libraries.
 
-We'll install:
-* [restify](https://www.npmjs.com/package/restify) - a http server 
-* [dotenv](https://www.npmjs.com/package/dotenv) - a helper to load environment variables
-* [path](https://www.npmjs.com/package/path) - a helper to handle dealing with files
+You will install:
+* [restify](https://www.npmjs.com/package/restify) - a web server component.
+* [dotenv](https://www.npmjs.com/package/dotenv) - a helper to load environment variables.
+* [path](https://www.npmjs.com/package/path) - a helper to handle dealing with files.
 
 ```
 npm install --save restify dotenv path
 ```
 
-Now we've got everything we need to create the main application file and boot up a bot process.
+Now you have everything you need to create the main application file and boot up a bot process.
 
-Note: All of these files got stored in the `node_modules` folder, and references to them are added to `package.json`.
+Note: All as you install these libraries, the associated files files are stored in the `node_modules` folder, and references to them are added to `package.json`. To re-install the libraries in the future, type `npm install`.
 
 ## Create the main application file
 
-Our project needs an [index.js](index.js) file to start. Create it in visual studio code along side the other files.
+This project needs an [index.js](index.js) file to contain the main application definition.
+Create it in Visual Studio code along side the other files in your project folder. Then, add the code below.
 
 Step 1: Import some components from external libraries.
  
