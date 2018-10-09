@@ -1,5 +1,6 @@
 # 01. Setup your bot
 
+In this module, you will get your development environment set up to work with the [Bot Builder SDK](https://)
 
 ## Install important bot building tools
 
@@ -110,7 +111,6 @@ Step 3: Create the bot's adapter. It is responsible for sending and receiving me
 const adapter = new BotFrameworkAdapter({});
 ```
 
-
 Step 4: Create a web server. 
 
 ```javascript
@@ -189,9 +189,12 @@ You now have the essential tools for building a bot installed and ready to exten
 
 ## Extra credit Reading
 
-* Console Bot Sample
-* Echobot with counter sample
-* Docs about Bot Adapters
-* Restify docs
+* [How Bots Work](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=cs)
+* [Bot Builder SDK Quickstart Guide](https://docs.microsoft.com/en-us/azure/bot-service/javascript/bot-builder-javascript-quickstart?view=azure-bot-service-4.0)
+* [BotFrameworkAdapter Class reference](https://docs.microsoft.com/en-us/javascript/api/botbuilder/botframeworkadapter?view=botbuilder-ts-latest)
+* [Docs for the Restify webserver module](http://restify.com/docs/home/)
+
+* [Sample app: Console bot](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/01.console-echo) - This sample includes a custom adapter that allows the bot to chat via the console.
+* [Sample app: Echobot with Counter](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/02.echobot-with-counter) - This sample demonstrates receiving messages, sending replies, and persisting state between messages.
 
 ## [NEXT MODULE](../02.echo_bot)
