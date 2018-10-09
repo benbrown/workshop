@@ -169,7 +169,8 @@ server.post('/api/messages', (req, res) => {
 
 Step 7: Send a simple response to the incoming event.
 
-The code below uses the TurnContext's [sendActivity()](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#sendactivity) method, to send a reply to the incoming event.
+The code below uses the TurnContext's [sendActivity()](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#sendactivity) method to send a reply to the incoming event.
+This example demonstrates sending a simple text response back - `sendActivity()` can also be provided with a full [Activity object](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/activity?view=botbuilder-ts-latest) with additional fields, including attachments, suggested responses, and other metadata. You'll see those in action later.
 
 ```javascript
 server.post('/api/messages', (req, res) => {
@@ -181,14 +182,18 @@ server.post('/api/messages', (req, res) => {
 });
 ```
 
-Your resulting file should match [index.js](index.js).
+Step 8: Save your changes.
+
+Your resulting file should match the [index.js](index.js) included in this repo. 
 
 ## Boot the bot!
+
+Now that you've got the boilerplate for your bot written, you should start it up and see what happens.
 
 From the command line, run:
 
 ```
-node index.js
+npm start
 ```
 
 You should see output like:
