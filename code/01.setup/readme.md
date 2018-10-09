@@ -230,11 +230,13 @@ IF IT DOESN'T:
 * Make sure app is running in your console window.
 * Make sure bot framework bot configuration is loaded (should see Live Chat (Workshop) in title bar)
 
-## MODULE COMPLETE!
+## MODULE COMPLETE
 
 You now have the essential tools for building a bot installed on your computer, and you are ready to extend this bot to do some useful things.
 
-## Extra credit Reading
+**[NEXT MODULE](../02.echo_bot)**: Set up your bot's robot ears!
+
+## Extra Credit Reading
 
 * [How Bots Work](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&tabs=cs)
 * [Bot Builder SDK Quickstart Guide](https://docs.microsoft.com/en-us/azure/bot-service/javascript/bot-builder-javascript-quickstart?view=azure-bot-service-4.0)
@@ -242,5 +244,3 @@ You now have the essential tools for building a bot installed on your computer, 
 * [Docs for the Restify webserver module](http://restify.com/docs/home/)
 * [Sample app: Console bot](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/01.console-echo) - This sample includes a custom adapter that allows the bot to chat via the console.
 * [Sample app: Echobot with Counter](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/02.echobot-with-counter) - This sample demonstrates receiving messages, sending replies, and persisting state between messages.
-
-**[NEXT MODULE](../02.echo_bot)**
