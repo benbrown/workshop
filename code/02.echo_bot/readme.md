@@ -6,17 +6,17 @@ Now, we'll learn how to dig into the incoming message event to access and use th
 ## Activities
 
 All the details of any event or message to or from your bot takes the form of an `Activity`.  Incoming activities are
-found in the `context.activity` field.
+found in the `context.activity` field. 
 
-## Activity Types
+Bots receive all sorts of activities - only some of which represent a message typed out by a human. Some activities represent users joining or quitting a chat session. Others represent non-message actions taken by users - for example files being uploaded, or actions taken by users on other messages - for example a user "liking" a comment. **Not every activity has a "text" field with a free form message.**
 
-Bots receive all sorts of activities - only some of which represent a message typed out by a human. Some activities represent users joining or quitting a chat session. Others represent non-message actions taken by users - for example files being uploaded, or actions taken by users on other messages - for example a user "liking" a comment.
+Every activity has a type field, found at `context.activity.type`. Before trying to access any other values in the activity, it is important that you first ensure you've got the right type of activity.
 
-The SDK comes with a handy `ActivityTypes` object we can use to test incoming activities.
+The Bot Builder SDK comes with a handy `ActivityTypes` object that you can use to test incoming activities. [Here's the full list of activity types you might see](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/activitytypes?view=botbuilder-ts-latest).
 
 ## Message Text
 
-Message activities have a `text` field that contains the text sent by the user. So, we can access it at `context.activity.text`.
+Message activities have a `text` field that contains the text sent by the user. So, after ensuring you've got a message activity, you can access it at `context.activity.text`.
 
 In your index.js file, inside the call to `adapter.processActivity`, add:
 
@@ -28,13 +28,19 @@ if (context.activity.type === ActivityTypes.Message) {
 }
 ````
 
-Restart the app, start again in the emulator.
+Save your changes, then  restart the Node app in your console by pressing `CTRL-C` on your keyboard. This will bring you back to the command line.
+
+<!-- TODO: Do we maybe want to use the Visual Studio built in console? Could we make the instructions more specific? -->
+
+Restart the Node app, and click "Start Over" in the emulator.
 
 ```
 node index.js
 ```
 
-Now, notice that the ACKs are not sent, but rather bot will echo what users send.  
+(screenshot?)
+
+Now, notice that when you send a message, instead of saying "RECEIVED: message", the bot will echo whatever text you send it.
 
 We also see 2 conversationUpdate events whenever it starts.
 
