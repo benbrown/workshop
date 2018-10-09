@@ -1,27 +1,30 @@
 # 01. Setup your bot
 
-In this module, you will get your development environment set up to work with the [Bot Builder SDK](https://)
+In this module, you will get your development environment set up to work with the [Azure Bot Service and the Bot Builder SDK.](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-overview-introduction?view=azure-bot-service-4.0) First, we
+will walk through the tools needed to develop and run a bot locally on your laptop. Then, we'll put together the first pieces
+of a brand new bot.
 
 ## Install important bot building tools
 
-This workshop uses NodeJS. Follow the instructions for your operating system at the link below to install Node on your computer.
+To build a bot, you need to be able to edit and run code, and you'll need to install some of the tools that come with Azure Bot Service.
+If possible, please do install the following tools before you arrive for the workshop so your laptop is ready to go!
 
+The Bot Framework Emulator is an app that provides a chat interface you can use to preview and test your bot.
+It can connect to bots running locally on your laptop.
+[Download Bot Framework Emulator](https://aka.ms/botframeworkemulator)
+
+Visual Studio Code is a popular editor for working with code. 
+[Download Visual Studio Code](https://code.visualstudio.com/)
+
+Node is the programming language and runtime interpretter that turns your static code into a living bot.
+Follow the instructions for your operating system to install Node and its suite of tools.
 [Download Node](https://nodejs.org/en/download/)
 
-Install msbot command line tool:
+After installing Node, install the `msbot` command line tool. You'll use this tool in the step to initialize your new bot project.
 
 ```
 npm install -g msbot
 ```
-
-Install the Bot Framework Emulator:
-
-[Download Bot Framework Emulator](https://aka.ms/botframeworkemulator)
-
-We'll use Visual Studio Code to edit code:
-
-[Install Visual Studio Code](https://code.visualstudio.com/)
-
 
 ## Initialize the project:
 
