@@ -188,12 +188,12 @@ Your resulting file should match the [index.js](index.js) included in this repo.
 
 ## Boot the bot!
 
-Now that you've got the boilerplate for your bot written, you should start it up and see what happens.
+Now that you've got the boilerplate code for your bot written, start it up and see what happens.
 
-From the command line, run:
+To launch the node application, open the command line and run:
 
 ```
-npm start
+node index.js
 ```
 
 You should see output like:
@@ -203,28 +203,36 @@ restify listening to http://[::]:3978
 
 IF YOU DON'T:
 
-what could go wrong? 
-common errors?
+* Check to make sure your index.js file matches the one in this repo
+* Check to make sure the .bot file, package.json file and index.js file are all in the same folder
+* Do you need to run npm install?
+* What could go wrong? 
+* common errors?
 
-### Load in emulator
+### Open your bot in the Emulator
 
-* Open the Bot Framework Emulator
+* Open the Bot Framework Emulator application
 * Select "Open Bot"
-* Choose workshop.bot
+* Choose the workshop.bot file in your project folder
 
-The framework will connect to your bot. You'll see it send a few messages immediately, demonstrating that your bot is receiving activities.  
+(Screenshot?)
+
+The emulator will connect to your bot application. You should see it send a few messages immediately, demonstrating that your bot is receiving activities.
+
+(Screenshot?)
 
 Any time you send a message, the bot should reply immediately with a confirmation.
 
+(Screenshot?)
+
 IF IT DOESN'T:
 
-* make sure app is running
-* make sure bot framework bot configuration is loaded (should see Live Chat (Workshop) in title bar)
-
+* Make sure app is running in your console window.
+* Make sure bot framework bot configuration is loaded (should see Live Chat (Workshop) in title bar)
 
 ## MODULE COMPLETE!
 
-You now have the essential tools for building a bot installed and ready to extend.
+You now have the essential tools for building a bot installed on your computer, and you are ready to extend this bot to do some useful things.
 
 ## Extra credit Reading
 
