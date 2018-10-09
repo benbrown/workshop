@@ -193,7 +193,6 @@ You now have the essential tools for building a bot installed and ready to exten
 * [Bot Builder SDK Quickstart Guide](https://docs.microsoft.com/en-us/azure/bot-service/javascript/bot-builder-javascript-quickstart?view=azure-bot-service-4.0)
 * [BotFrameworkAdapter Class reference](https://docs.microsoft.com/en-us/javascript/api/botbuilder/botframeworkadapter?view=botbuilder-ts-latest)
 * [Docs for the Restify webserver module](http://restify.com/docs/home/)
-
 * [Sample app: Console bot](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/01.console-echo) - This sample includes a custom adapter that allows the bot to chat via the console.
 * [Sample app: Echobot with Counter](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/02.echobot-with-counter) - This sample demonstrates receiving messages, sending replies, and persisting state between messages.
 
