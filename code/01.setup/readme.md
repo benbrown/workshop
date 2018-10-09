@@ -66,11 +66,11 @@ Using npm, install the Bot Builder SDK and all the extension libraries. You won'
 but its easier to get this out of the way up front. 
 
 You will install:
-* [botbuilder](https://www.npmjs.com/package/botbuilder) - the main library
-* [botbuilder-ai](https://www.npmjs.com/package/botbuilder-ai) - tools for using LUIS and QnA Maker
-* [botbuilder-azure](https://www.npmjs.com/package/botbuilder-azure) - tools for integrating with Azure storage
-* [botbuilder-dialogs](https://www.npmjs.com/package/botbuilder-dialogs) - extension to the SDK for handling dialog
-* [botframework-config](https://www.npmjs.com/package/botframework-config) - helper functions for loading information from the .bot file
+* [botbuilder](https://www.npmjs.com/package/botbuilder) - the core SDK.
+* [botbuilder-ai](https://www.npmjs.com/package/botbuilder-ai) - tools for using [LUIS](https://www.luis.ai) and [QnA Maker](https://www.qnamaker.ai).
+* [botbuilder-azure](https://www.npmjs.com/package/botbuilder-azure) - tools for integrating with Azure storage.
+* [botbuilder-dialogs](https://www.npmjs.com/package/botbuilder-dialogs) - extension to the SDK for handling dialog.
+* [botframework-config](https://www.npmjs.com/package/botframework-config) - helper functions for loading information from the .bot file.
 
 ```
 npm install --save botbuilder botbuilder-ai botbuilder-azure botbuilder-dialogs botframework-config
