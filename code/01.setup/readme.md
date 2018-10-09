@@ -177,7 +177,7 @@ IF YOU DON'T:
 what could go wrong? 
 common errors?
 
-## Load in emulator
+### Load in emulator
 
 * Open the Bot Framework Emulator
 * Select "Open Bot"
