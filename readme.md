@@ -20,17 +20,15 @@ Before the workshop, [take these steps to install required tools](code/01.setup/
 
 If you want to follow along using the pre-built code samples, you'll need to download a copy of this project.
 
-### [Download Workshop Code (Zip File)](https://github.com/benbrown/workshop/archive/master.zip)
-### or 
-### Clone with Git
+### [Download Workshop Code (Zip File)](https://github.com/benbrown/workshop/archive/master.zip) or Clone with Git
 
-In your console terminal, use git to clone this repo onto your computer:
+Use git to clone this repo onto your computer:
 
 ```
 git clone https://github.com/benbrown/workshop.git
 ```
 
-Once that completes, navigate into the workshop folder, and then into the first module.
+Once downloaded, navigate into the workshop folder, and then into the sub-folder for the first module.
 
 ```
 cd workshop/code/01.setup
