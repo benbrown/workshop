@@ -38,6 +38,7 @@ Now you're ready to start!
 
 ### Contents:
 
+* [Intro](code/00.intro) - An introduction to the world of bots
 * [Module 01](code/01.setup) - prep and setup
 * [Module 02](code/02.echo_bot) - Echo bot running locally
 * [Module 03](code/03.welcome_bot) - welcoming user and greeting 
