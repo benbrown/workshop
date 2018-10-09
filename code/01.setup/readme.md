@@ -196,4 +196,4 @@ You now have the essential tools for building a bot installed and ready to exten
 * [Sample app: Console bot](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/01.console-echo) - This sample includes a custom adapter that allows the bot to chat via the console.
 * [Sample app: Echobot with Counter](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/02.echobot-with-counter) - This sample demonstrates receiving messages, sending replies, and persisting state between messages.
 
-## [NEXT MODULE](../02.echo_bot)
+**[NEXT MODULE](../02.echo_bot)**
