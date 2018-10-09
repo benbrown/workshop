@@ -93,10 +93,13 @@ Note: All as you install these libraries, the associated files files are stored 
 
 ## Create the main application file
 
-This project needs an [index.js](index.js) file to contain the main application definition.
-Create it in Visual Studio code along side the other files in your project folder. Then, add the code below.
+This new project needs a main file to contain the application definition. 
+Create a file called [index.js](index.js) in Visual Studio Code alongside the other files in your project folder. 
+Then, follow the steps below to add the code for your bot.
 
 Step 1: Import some components from external libraries.
+
+To use the modules you installed in the last step, you need to "require" them into the main application.
  
  ```javascript
  const { BotFrameworkAdapter, ConversationState, MemoryStorage } = require('botbuilder');
@@ -104,24 +107,35 @@ Step 1: Import some components from external libraries.
  const restify = require('restify');
 ```
 
-Step 2: Initialize our application environment with values from the .env file
+Step 2: Initialize the application environment with values from a .env file.
+
+This single line of code imports the `dotenv` library, and at the same time, causes it to load the values from the .env file into an object called `process.env`.
+This makes handling runtime settings easier during development - without the .env file, you would be required to pass in the appropriate settings each time you launch the bot.
+Once your bot goes into production, these settings will likely be managed via tools provided by your hosting service.
 
 ```javascript
  require('dotenv').config();
 ```
 
-Create a file called [.env](.env) and the following:
+Create a file called [.env](.env) and add the following initial values. `botFilePath` is a variable used to point the application at the .bot file you created earlier.
 ```
 botFilePath=workshop.bot
 ```
 
-Step 3: Create the bot's adapter. It is responsible for sending and receiving messages for the bot. 
+Step 3: Create the bot's adapter. This object is responsible for sending and receiving messages, and provides functionality for dealing with the messaging channel.
+In this case, we'll be using a `BotFrameworkAdapter`, which connects a bot to a suite of Azure Bot Service channels like Slack, Skype, and Microsoft Teams.
+It also provides compatability with the Bot Framework Emulator.
+
+This is only one type of adapter - developers can build adapters to connect Bot Builder to other messaging channels or protocols. For example, [See this sample app that uses a custom adapter to connect a bot to the console command line](https://github.com/Microsoft/BotBuilder-Samples/tree/master/samples/javascript_nodejs/01.console-echo).
 
 ```javascript
 const adapter = new BotFrameworkAdapter({});
 ```
 
 Step 4: Create a web server. 
+
+Restify provides an easy to use but feature rich webserver. By default, it will only respond to URLs you specifically define in your code.
+The code below will create the server, and configure it to serve content at a specific port (defaulting to 3978, but customizable via the .env file).
 
 ```javascript
 const server = restify.createServer();
@@ -131,13 +145,20 @@ server.listen(process.env.port || process.env.PORT || 3978, function() {
 ```
 
 Step 5: Define an endpoint URL used to receive messages from Bot Framework.
+The code below creates an endpoint that will accept a POST request to `/api/messages`.
+
 ```javascript
 server.post('/api/messages', (req, res) => {
-
+    // do something here.
 });
 ```
 
-Step 6: Process the incoming request into a TurnContext.
+Step 6: Process the incoming request into a TurnContext using [adapter.processActivity()](https://docs.microsoft.com/en-us/javascript/api/botbuilder/botframeworkadapter?view=botbuilder-ts-latest#processactivity).
+
+The first job the adapter does is turn a raw incoming webhook request into a usable object.
+The TurnContext includes the original data from the messaging channel as well as functionality to
+track the message as it is processed and a response is delivered. You'll learn more about that in upcoming modules.
+
 ```javascript
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (context) => {
@@ -147,6 +168,9 @@ server.post('/api/messages', (req, res) => {
 ```
 
 Step 7: Send a simple response to the incoming event.
+
+The code below uses the TurnContext's [sendActivity()](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#sendactivity) method, to send a reply to the incoming event.
+
 ```javascript
 server.post('/api/messages', (req, res) => {
     adapter.processActivity(req, res, async (context) => {
