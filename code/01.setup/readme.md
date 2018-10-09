@@ -7,7 +7,7 @@ of a brand new bot.
 ## Install important bot building tools
 
 To build a bot, you need to be able to edit and run code, and you'll need to install some of the tools that come with Azure Bot Service.
-If possible, please do install the following tools before you arrive for the workshop so your laptop is ready to go!
+If possible, install the following tools before you arrive for the workshop so your laptop is ready to go.
 
 The Bot Framework Emulator is an app that provides a chat interface you can use to preview and test your bot.
 It can connect to bots running locally on your laptop.
