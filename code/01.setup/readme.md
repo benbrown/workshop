@@ -56,11 +56,11 @@ Using npm, install all of the Bot Builder libraries. We won't use some of these 
 
 We'll install:
 
-* botbuilder - the main library
-* botbuilder-ai - tools for using LUIS and QnA Maker
-* botbuilder-azure - tools for integrating with Azure storage
-* botbuilder-dialogs - extension to the SDK for handling dialog
-* botframework-config - helper functions for loading information from the .bot file
+* [botbuilder](https://www.npmjs.com/package/botbuilder) - the main library
+* [botbuilder-ai](https://www.npmjs.com/package/botbuilder-ai) - tools for using LUIS and QnA Maker
+* [botbuilder-azure](https://www.npmjs.com/package/botbuilder-azure) - tools for integrating with Azure storage
+* [botbuilder-dialogs](https://www.npmjs.com/package/botbuilder-dialogs) - extension to the SDK for handling dialog
+* [botframework-config](https://www.npmjs.com/package/botframework-config) - helper functions for loading information from the .bot file
 
 ```
 npm install --save botbuilder botbuilder-ai botbuilder-azure botbuilder-dialogs botframework-config
@@ -69,9 +69,9 @@ npm install --save botbuilder botbuilder-ai botbuilder-azure botbuilder-dialogs 
 In addition to Bot Builder, we need a few open source libraries. 
 
 We'll install:
-* restify - a http server 
-* dotenv - a helper to load environment variables
-* path - a helper to handle dealing with files
+* [restify](https://www.npmjs.com/package/restify) - a http server 
+* [dotenv](https://www.npmjs.com/package/dotenv) - a helper to load environment variables
+* [path](https://www.npmjs.com/package/path) - a helper to handle dealing with files
 
 ```
 npm install --save restify dotenv path
