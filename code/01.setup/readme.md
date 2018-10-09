@@ -31,7 +31,7 @@ msbot init
 ```
 
 * Answer "workshop" as bot's name.
-* Answer "http://localhost:3978/api/messages" for endpoint
+* Answer `http://localhost:3978/api/messages` for endpoint
 * Answer "no" to "appid"
 * Answer "no" to encrypt
 
