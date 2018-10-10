@@ -26,7 +26,9 @@ if (context.activity.type === ActivityTypes.Message) {
 } else {
     await context.sendActivity(`RECEIVED: ${ context.activity.type }`);
 }
-````
+```
+
+Your `index.js` file should [now match this file](index.js).
 
 Save your changes, then  restart the Node app in your console by pressing `CTRL-C` on your keyboard. This will bring you back to the command line.
 
