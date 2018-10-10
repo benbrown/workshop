@@ -1,4 +1,4 @@
-# 02. Give your bot some manners
+# 02. Teach your bot some manners
 
 all bots should welcome users, and introduce themselves
 

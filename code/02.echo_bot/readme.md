@@ -41,19 +41,21 @@ node index.js
 (screenshot?)
 
 Now, notice that when you send a message, instead of saying "RECEIVED: message", the bot will echo whatever text you send it.
+This is a simple use of user input, but at this point hopefully you can start to see how your bot will interact with the world,
+and all of the things made possible by this seemingly simple exchange of messages between human and machine.
 
-We also see 2 conversationUpdate events whenever it starts.
+Ah!
 
-There ARE some of those non-message events that are useful! Like the conversationUpdate event.
+In addition to the echos our bot now sends, you will have noticed 2 messages about conversationUpdate events. These are caused by some of those non-message activities mentioned before. conversationUpdate activities are sent for a variety of reasons, but the 2 you see when at this point are something that every bot should recognize and be ready to respond to.
 
-We'll use those to greet users when they connect.
-
+In the next module, we'll learn how to these conversationUpdate activities to send greetings to users when they first meet your bot.
 
 ## MODULE COMPLETE!
 
+**[NEXT MODULE](../03.welcome_bot)**: Teach your bot some manners
+
 ## Extra credit Reading
 
-* Activity Types reference
-
-
-## [NEXT MODULE](../03.welcome_bot)
+* [Activity Types reference](https://docs.microsoft.com/en-us/javascript/api/botframework-schema/activitytypes?view=botbuilder-ts-latest)
+* [TurnContext Class Reference](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest)
+* [sendActivity() Method](https://docs.microsoft.com/en-us/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#sendactivity)
